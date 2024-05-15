@@ -40,25 +40,31 @@
                         @php
                             $no = 1;
                         @endphp
-                        @foreach ($prodi as $item)
+
+                        @if($prodi && $prodi->count() > 0)
+                            @foreach ($prodi as $item)
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>{{ $item->nama }}</td>
+                                    <td>
+                                        <a href="{{ route('admin.prodi.edit', $item->id) }}" class="btn btn-warning btn-xs">
+                                            <i class="fa fa-pencil-alt"></i>
+                                        </a>
+                                        <form action="{{ route('admin.prodi.destroy', $item->id) }}" method="post" class="d-inline">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
                             <tr>
-                                <td>{{ $no++ }}</td>
-                                <td>{{ $item->nama }}</td>
-                                <td>
-                                    <a href="{{ route('admin.prodi.edit', $item->id) }}" class="btn btn-warning btn-xs">
-                                        <i class="fa fa-pencil-alt"></i>
-                                    </a>
-                                    <form action="{{ route('admin.prodi.destroy', $item->id) }}" method="post"
-                                        class="d-inline">
-                                        @csrf
-                                        @method('delete')
-                                        <button class="btn btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </form>
-                                </td>
+                                <td colspan="3">Tidak ada data program studi.</td>
                             </tr>
-                        @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>

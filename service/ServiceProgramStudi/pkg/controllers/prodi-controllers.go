@@ -2,12 +2,9 @@ package controllers
 
 import (
 	"encoding/json"
-	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
-	"path/filepath"
 
 	"github.com/gorilla/mux"
 	"github.com/sionprdsi/ServiceProgramStudi/pkg/config"
@@ -36,49 +33,14 @@ func CreateProgramstudi(w http.ResponseWriter, r *http.Request) {
 }
 
 func UpdateProgramstudi(w http.ResponseWriter, r *http.Request) {
-	db := config.GetDB() // Mengambil koneksi database
+	db := config.GetDB() // Dapatkan koneksi database
 	var prodi models.Prodi
 
-	// Mengambil ID prodi dari URL
+	// Dapatkan ID Prodi dari URL
 	vars := mux.Vars(r)
 	id := vars["id"]
 
-	// Membaca isi permintaan untuk mengupdate data prodi atau beranda
-	r.ParseMultipartForm(10 << 20) // Max 10 MB files
-
-	// Proses unggahan file jika ada
-	if file, handler, err := r.FormFile("foto"); err == nil {
-		defer file.Close()
-
-		// Menyimpan file yang diunggah di direktori yang ditentukan
-		prodifotoPath := filepath.Join("public", "Foto", handler.Filename)
-		dst, err := os.Create(prodifotoPath)
-		if err != nil {
-			log.Println("Error creating file:", err)
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		defer dst.Close()
-
-		// Menyalin isi file yang diunggah ke file tujuan
-		if _, err := io.Copy(dst, file); err != nil {
-			log.Println("Error copying file:", err)
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-		// Set field prodi ke foto dengan path file yang baru disimpan
-		prodi.Foto = prodifotoPath
-	}
-
-	// Mencari foto yang ada berdasarkan ID
-	if db.First(&prodi, id).RecordNotFound() {
-		log.Println("Profil not found")
-		http.Error(w, "Profil not found", http.StatusNotFound)
-		return
-	}
-
-	// Mendekode JSON body ke dalam struktur sementara
+	// Parse body request untuk memperbarui data Prodi
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		log.Println("Error reading body:", err)
@@ -86,22 +48,33 @@ func UpdateProgramstudi(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Memperbarui bidang prodi dengan data baru
+	// Decode JSON body ke struct sementara
 	if err := json.Unmarshal(body, &prodi); err != nil {
 		log.Println("Error decoding JSON:", err)
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	// Menyimpan prodi ke database
-	if err := db.Save(&prodi).Error; err != nil {
-		log.Println("Error saving data:", err)
+	// Temukan catatan Prodi yang ada berdasarkan ID
+	if db.First(&prodi, id).RecordNotFound() {
+		log.Println("Prodi not found")
+		http.Error(w, "Prodi not found", http.StatusNotFound)
+		return
+	}
+
+	// Update bidang catatan Prodi yang ada dengan data baru
+	if err := db.Model(&prodi).Updates(prodi).Error; err != nil {
+		log.Println("Error updating data:", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("Prodi updated successfully"))
+	// Respon dengan pesan sukses
+	response := map[string]interface{}{
+		"success": true,
+	}
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(response)
 }
 
 func DeleteProgramstudi(w http.ResponseWriter, r *http.Request) {

@@ -212,7 +212,7 @@
 
 
         <!-- ======= Blog Single Section ======= -->
-        <section id="blog" class="blog">
+        <section style="margin-top: -1% " id="blog" class="blog">
             <div class="container" data-aos="fade-up">
 
                 <div class="row">
@@ -233,7 +233,7 @@
 
                             <div class="header-title mb-md-5 mt-4">
                                 <h2 class="entry-title" style="font-size: 230%">
-                                    <a class="sub-title" style="font-size:89%">Tentang {{ $detail->nama }}</a>
+                                    <a class="" style="font-size:89%">Tentang {{ $detail->nama }}</a>
                                 </h2>
                             </div>
 
@@ -241,11 +241,11 @@
                                 <p>
                                     {{ $detail->sejarah }}
                                 </p>
-                                <blockquote>
+                                {{-- <blockquote>
                                     <p>
                                         {{ $detail->subtitle }}
                                     </p>
-                                </blockquote>
+                                </blockquote> --}}
 
                                 <div class="header-title mb-md-5 mt-4">
                                     <h2 class="entry-title" style="font-size: 230%">
@@ -383,9 +383,9 @@
                                     </table>
                                 @endforeach
 
-                                <div class="header-title mb-md-5 mt-4">
+                                {{-- <div class="header-title mb-md-5 mt-4">
                                     <h2 class="entry-title" style="font-size: 170%">
-                                        <a class="sub-title" style="font-size:115%" href="">Dosen Pengajar di
+                                        <a class="" style="font-size:115%" href="">Dosen Pengajar di
                                             {{ $detail->nama }}</a>
                                     </h2>
                                     <!-- Deskripsi Dosen Pengajar -->
@@ -398,7 +398,7 @@
                                         @endforeach
                                     </ul>
 
-                                </div>
+                                </div> --}}
 
 
                             </div>
