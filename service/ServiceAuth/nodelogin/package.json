@@ -1,0 +1,16 @@
+{
+  "name": "nodelogin",
+  "version": "1.0.0",
+  "description": "MicroServices Auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pardosi sion",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  }
+}

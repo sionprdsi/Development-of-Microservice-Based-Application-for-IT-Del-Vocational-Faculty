@@ -77,10 +77,19 @@ Route::delete('/admin/profil/{id}', [ProfilController::class, 'delete'])->name('
 Route::post('/admin/profil/store', [ProfilController::class, 'store'])->name('admin.profil.store');
 // -- ---------------------------------------------------------------------------------------------------------
 
-// tentang
+
+// Route untuk menampilkan halaman profil
 Route::get('/admin/tentang', [TentangController::class, 'index'])->name('admin.tentang');
-// Update admin menggunakan metode PUT
+
+// Route untuk membuat profil baru menggunakan metode POST
+Route::post('/admin/tentang/create', [TentangController::class, 'create'])->name('admin.tentang.create');
+
+// Route untuk memperbarui profil menggunakan metode PUT
 Route::put('/admin/tentang/{id}/update', [TentangController::class, 'update'])->name('admin.tentang.update');
+
+// Route untuk menghapus profil menggunakan metode DELETE
+Route::delete('/admin/tentang/{id}/delete', [TentangController::class, 'delete'])->name('admin.tentang.delete');
+
 
 // // tentang
 // Route::get('/admin/tentang', function () {
@@ -89,6 +98,7 @@ Route::put('/admin/tentang/{id}/update', [TentangController::class, 'update'])->
 //     $tentang = $response->json();
 
 //     // Render the view and pass the fetched data
+
 //     return view('admin.tentang.index', compact('tentang'));
 // })->name('admin.tentang');
 
@@ -120,6 +130,13 @@ Route::put('/admin/prodi/{id}/update', [ProdiController::class, 'update'])->name
 
 
 
+// -- ---------------------------------------------------------------------------------------------------------
+
+
+Route::get('login', [LoginController::class, 'login'])->name('login')->middleware('guest');
+Route::post('login', [LoginController::class, 'authenticate'])->name('auth')->middleware('guest');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
 
 
 
@@ -131,10 +148,6 @@ Route::get('/prodi', [ControllersProdiController::class, 'index'])->name('prodi'
 Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
 Route::get('/event', [ControllersEventController::class, 'index'])->name('event');
 
-// routes/auth
-Route::get('login', [LoginController::class, 'login'])->name('login')->middleware('guest');
-Route::post('login', [LoginController::class, 'authenticate'])->name('auth')->middleware('guest');
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 //home/admin
 Route::get('/admin/home', [HomeController::class, 'index'])->name('admin.home');

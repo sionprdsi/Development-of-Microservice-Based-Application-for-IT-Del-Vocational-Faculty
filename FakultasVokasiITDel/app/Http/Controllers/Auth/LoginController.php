@@ -3,36 +3,16 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-// use Illuminate\Founda    tion\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
-    // use AuthenticatesUsers;
-
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-
     public function __construct()
     {
-        $this->middleware('guest')->except(array('logout'));
+        $this->middleware('guest')->except(['logout']);
     }
-
 
     public function login()
     {
@@ -41,6 +21,15 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
+        // Periksa apakah server Node.js sedang berjalan
+        $nodeServerStatus = Http::get('http://localhost:7009/status');
+
+        if ($nodeServerStatus->status() !== 200) {
+            return back()->withErrors([
+                'server' => 'Server sedang tidak berjalan. Silakan coba lagi nanti.'
+            ]);
+        }
+
         $credentials = $request->validate([
             'email' => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
@@ -48,12 +37,11 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
             return redirect()->route('admin.home');
-        };
+        }
 
         return back()->withErrors([
-            'email' => 'email atau password salah',
+            'email' => 'Email atau password salah.',
         ])->onlyInput('email');
     }
 

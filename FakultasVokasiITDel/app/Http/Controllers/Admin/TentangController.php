@@ -105,4 +105,52 @@ class TentangController extends Controller
             return redirect()->route('admin.tentang')->with('error', 'Failed to update tentang: ' . $e->getMessage());
         }
     }
+
+    // Fungsi untuk membuat profil baru
+    public function create(Request $request)
+    {
+        $client = new Client(['base_uri' => 'http://localhost:8002']); // Inisialisasi klien Guzzle
+
+        try {
+            // Kirim permintaan ke layanan Go dengan metode POST
+            $response = $client->request('POST', "admin/tentang/create", [
+                RequestOptions::JSON => $request->all(),
+            ]);
+
+            if ($response->getStatusCode() == 200) {
+                // Tampilkan pesan sukses jika permintaan berhasil
+                return redirect()->route('admin.tentang')->with('success', 'Tentang created successfully');
+            } else {
+                // Tampilkan pesan kesalahan jika permintaan gagal
+                return redirect()->route('admin.tentang')->with('error', 'Failed to create Tentang');
+            }
+        } catch (\Exception $e) {
+            // Tangani kesalahan yang mungkin terjadi
+            return redirect()->route('admin.tentang')->with('error', 'Failed to create tentang: ' . $e->getMessage());
+        }
+    }
+
+    // Fungsi untuk menghapus profil
+    public function delete(Request $request)
+    {
+        $client = new Client(['base_uri' => 'http://localhost:8002']); // Inisialisasi klien Guzzle
+
+        try {
+            // Kirim permintaan ke layanan Go dengan metode DELETE
+            $response = $client->request('DELETE', "admin/tentang/delete/{$request->id}");
+
+            if ($response->getStatusCode() == 200) {
+                // Tampilkan pesan sukses jika permintaan berhasil
+                return redirect()->route('admin.tentang')->with('success', 'Tentang deleted successfully');
+            } else {
+                // Tampilkan pesan kesalahan jika permintaan gagal
+                return redirect()->route('admin.tentang')->with('error', 'Failed to delete Tentang');
+            }
+        } catch (\Exception $e) {
+            // Tangani kesalahan yang mungkin terjadi
+            return redirect()->route('admin.tentang')->with('error', 'Failed to delete tentang: ' . $e->getMessage());
+        }
+    }
+
+
 }

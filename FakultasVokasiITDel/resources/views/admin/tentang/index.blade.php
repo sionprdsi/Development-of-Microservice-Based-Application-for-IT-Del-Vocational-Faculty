@@ -103,7 +103,7 @@
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col text-right">
-                                    <button type="submit" class="btn btn-primary">Update</button>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
                                 </div>
                             </div>
                         </div>

@@ -93,7 +93,65 @@ func UpdateTentang(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Tentang updated successfully"))
 }
 
-func ProfilRoutes(r *mux.Router) {
+func CreateTentang(w http.ResponseWriter, r *http.Request) {
+	db := config.GetDB() // Mengambil koneksi database
+	var tentang models.Tentang
+
+	// Membaca isi permintaan untuk membuat data baru tentang
+	body, err := ioutil.ReadAll(r.Body)
+	if err != nil {
+		log.Println("Error reading body:", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Memperbarui bidang tentang dengan data baru
+	if err := json.Unmarshal(body, &tentang); err != nil {
+		log.Println("Error decoding JSON:", err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	// Menyimpan tentang ke database
+	if err := db.Create(&tentang).Error; err != nil {
+		log.Println("Error saving data:", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusCreated)
+	w.Write([]byte("Tentang created successfully"))
+}
+
+func DeleteTentang(w http.ResponseWriter, r *http.Request) {
+	db := config.GetDB() // Mengambil koneksi database
+	var tentang models.Tentang
+
+	// Mengambil ID tentang dari URL
+	vars := mux.Vars(r)
+	id := vars["id"]
+
+	// Mencari tentang yang ada berdasarkan ID
+	if db.First(&tentang, id).RecordNotFound() {
+		log.Println("Profil not found")
+		http.Error(w, "Profil not found", http.StatusNotFound)
+		return
+	}
+
+	// Menghapus tentang dari database
+	if err := db.Delete(&tentang).Error; err != nil {
+		log.Println("Error deleting data:", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("Tentang deleted successfully"))
+}
+
+func TentangRoutes(r *mux.Router) {
 	r.HandleFunc("/admin/tentang", GetTentang).Methods("GET")
-	r.HandleFunc("/admin/tentang/update", UpdateTentang).Methods("POST")
+	r.HandleFunc("/admin/tentang/update", UpdateTentang).Methods("PUT")
+	r.HandleFunc("/admin/tentang/create", CreateTentang).Methods("POST")
+	r.HandleFunc("/admin/tentang/delete/{id}", DeleteTentang).Methods("DELETE")
 }

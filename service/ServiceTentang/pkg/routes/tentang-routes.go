@@ -8,5 +8,6 @@ import (
 func TentangRoutes(r *mux.Router) {
 	r.HandleFunc("/admin/tentang", controllers.GetTentang).Methods("GET")
 	r.HandleFunc("/admin/tentang/update", controllers.UpdateTentang).Methods("PUT")
-	r.HandleFunc("/admin/tentang/update/{id}", controllers.UpdateTentang).Methods("PUT")
+	r.HandleFunc("/admin/tentang/create", controllers.CreateTentang).Methods("POST")
+	r.HandleFunc("/admin/tentang/delete/{id}", controllers.DeleteTentang).Methods("DELETE")
 }

@@ -182,7 +182,6 @@ func DeleteProfil(w http.ResponseWriter, r *http.Request) {
 }
 
 // ProfilRoutes mendefinisikan rute untuk operasi profil
-// ProfilRoutes mendefinisikan rute untuk operasi profil
 func ProfilRoutes(r *mux.Router) {
 	r.HandleFunc("/admin/profil", GetProfil).Methods("GET")
 	r.HandleFunc("/admin/profil/update", UpdateProfil).Methods("PUT")

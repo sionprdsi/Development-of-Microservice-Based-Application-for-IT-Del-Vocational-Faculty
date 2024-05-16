@@ -57,26 +57,26 @@
                     <i class="fas fa-fw fa-info"></i>
                     <span>Tentang Kampus</span></a>
             </li>
-            <li class="nav-item {{ request()->routeIs('admin.galeri') ? 'active' : '' }}">
+            {{-- <li class="nav-item {{ request()->routeIs('admin.galeri') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.galeri') }}">
                     <i class="fas fa-fw fa-image"></i>
                     <span>Galeri</span></a>
-            </li>
+            </li> --}}
             <li class="nav-item {{ request()->routeIs('admin.prodi') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.prodi') }}">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Program Studi</span></a>
             </li>
-            <li class="nav-item {{ request()->routeIs('admin.semester') ? 'active' : '' }}">
+            {{-- <li class="nav-item {{ request()->routeIs('admin.semester') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.semester') }}">
                     <i class="fas fa-fw fa-file"></i>
                     <span>Semester</span></a>
-            </li>
-            <li class="nav-item {{ request()->routeIs('admin.prestasi') ? 'active' : '' }}">
+            </li> --}}
+            {{-- <li class="nav-item {{ request()->routeIs('admin.prestasi') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.prestasi') }}">
                     <i class="fas fa-fw fa-trophy"></i>
                     <span>Prestasi</span></a>
-            </li>
+            </li> --}}
             {{-- <li class="nav-item {{ request()->routeIs('admin.dosen') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.dosen') }}">
                     <i class="fas fa-fw fa-user-tie"></i>
