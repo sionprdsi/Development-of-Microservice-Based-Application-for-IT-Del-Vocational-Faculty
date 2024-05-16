@@ -27,25 +27,26 @@ SET time_zone = "+00:00";
 -- Struktur dari tabel `profils`
 --
 
+DROP TABLE profils
 CREATE TABLE `profils` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nama` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `alamat` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `kode_pos` int(11) DEFAULT NULL,
-  `telepon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `karir` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `logo` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `video` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `peta` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `kenapa_vokasi` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `facebook` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `twitter` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `youtube` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `instagram` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `id` BIGINT(20) UNSIGNED NOT NULL,
+  `nama` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alamat` TEXT COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `kode_pos` INT(11) DEFAULT NULL,
+  `telepon` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `karir` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `logo` TEXT COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video` TEXT COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `peta` TEXT COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `kenapa_vokasi` LONGTEXT COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facebook` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `youtube` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `instagram` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` TIMESTAMP NULL DEFAULT NULL,
+  `updated_at` TIMESTAMP NULL DEFAULT NULL
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `profils`

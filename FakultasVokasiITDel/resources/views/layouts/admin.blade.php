@@ -72,6 +72,11 @@
                     <i class="fas fa-fw fa-file"></i>
                     <span>Semester</span></a>
             </li>
+            <li class="nav-item {{ request()->routeIs('admin.prestasi') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.prestasi') }}">
+                    <i class="fas fa-fw fa-trophy"></i>
+                    <span>Prestasi</span></a>
+            </li>
             {{-- <li class="nav-item {{ request()->routeIs('admin.dosen') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.dosen') }}">
                     <i class="fas fa-fw fa-user-tie"></i>
@@ -81,7 +86,7 @@
                 <a class="nav-link" href="{{ route('admin.prestasi') }}">
                     <i class="fas fa-fw fa-trophy"></i>
                     <span>Prestasi</span></a>
-            </li> --}}
+            </li> -
             {{-- <li class="nav-item {{ request()->routeIs('admin.event') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.event') }}">
                     <i class="fas fa-fw fa-calendar"></i>

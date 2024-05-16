@@ -64,11 +64,17 @@ use Illuminate\Support\Facades\Http;
 // Route::put('/admin/profil/{id}/update', [ProfilController::class, 'update'])->name('admin.profil.update');
 
 
+// Routes
 // Beranda
 Route::get('/admin/profil', [ProfilController::class, 'index'])->name('admin.profil');
 // Update profil menggunakan metode PUT
 Route::put('/admin/profil/{id}/update', [ProfilController::class, 'update'])->name('admin.profil.update');
-
+// Buat profil baru menggunakan metode POST
+Route::post('/admin/profil/create', [ProfilController::class, 'create'])->name('admin.profil.create');
+// Hapus profil menggunakan metode DELETE
+Route::delete('/admin/profil/{id}', [ProfilController::class, 'delete'])->name('admin.profil.delete');
+// Simpan profil baru menggunakan metode POST
+Route::post('/admin/profil/store', [ProfilController::class, 'store'])->name('admin.profil.store');
 // -- ---------------------------------------------------------------------------------------------------------
 
 // tentang

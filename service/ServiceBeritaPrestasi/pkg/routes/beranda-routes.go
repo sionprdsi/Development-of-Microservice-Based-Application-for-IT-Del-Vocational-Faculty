@@ -9,6 +9,4 @@ func ProfilRoutes(r *mux.Router) {
 	r.HandleFunc("/admin/profil", controllers.GetProfil).Methods("GET")
 	r.HandleFunc("/admin/profil/update", controllers.UpdateProfil).Methods("PUT")
 	r.HandleFunc("/admin/profil/update/{id}", controllers.UpdateProfil).Methods("PUT")
-	r.HandleFunc("/admin/profil/create", controllers.CreateProfil).Methods("POST")
-	r.HandleFunc("/admin/profil/delete/{id}", controllers.DeleteProfil).Methods("DELETE")
 }
