@@ -1,11 +1,41 @@
 # MicroService_FakultasVokasi
-Pembangunan aplikasi berbasis web ini ditujukan untuk sistem informasi Fakultas Vokasi IT Del. Aplikasi ini dapat digunakan oleh user untuk mendapatkan informasi tentang Fakultas  Vokasi IT Del. Pada aplikasi ini, user hanya dapat membaca informasi tanpa melakukan transaksi apapun.
-Aplikasi ini dibangun dengan menggunakan 2 bahasa pemrograman. Bagian back-end dan front- end dibangun dengan bahasa yang berbeda. Untuk bagian back-end digunakan bahasa Go dan untuk bagian front-end menggunakan bahasa PHP,  khususnya framework Laravel.
 
-Aplikasi ini menggunakan arsitektur microservice yang bertujuan untuk membagi layanan menjadi bagian yang lebih kecil . Dengan ini, maka setiap service akan memiliki database-nya masing-masing. Service yang ada pada aplikasi adalah Dashboard Service, About Service, dan Study Program Service. Setiap service akan berjalan secara tunggal sehingga satu service tidak akan memengaruhi service lainnya. Namun, meskipun berdiri sendiri, setiap service ini tetap saling terhubung antara satu dengan yang lainnya. Antarservice ini akan saling berkomunikasi dengan HTTP Request berstandar REST API.
-Setiap database pada masing-masing service diatur untuk menggunakan port yang berbeda. Ini bertujuan agar terdapat pemisahan yang jelas antara setiap layanan. Dengan penggunaan port yang berbeda, jika salah satu service mengalami masalah dan tidak dapat beroperasi, service lainnya tetap dapat berjalan tanpa terganggu.
+Aplikasi berbasis web ini dikembangkan untuk sistem informasi Fakultas Vokasi IT Del. Aplikasi ini memungkinkan pengguna untuk mengakses informasi mengenai Fakultas Vokasi IT Del. Pengguna hanya dapat membaca informasi tanpa melakukan transaksi apa pun.
 
-arsitektur microservice yang digunakan pada pembangunan aplikasi website Fakultas Vokasi. REST API digunakan sebagai penghubung antara web ui dengan service yang tersedia sehingga memungkinkan service dapat dikonsumsi oleh web ui. Hal inilah yang menyebabkan service dapat diakses oleh beberapa platform tanpa harus terbatas pada satu bahasa pemrograman saja. Sama halnya dengan pembangunan aplikasi web jual beli ini. Bahasa yang digunakan pada bagian front-end adalah bahasa PHP (framework Laravel) dan pada bagian back- end menggunakan bahasa Go. Meskipun memiliki bahasa yang berbeda, tetapi aplikasi akan tetap dapat berjalan dengan adanya REST API.
+## Teknologi yang Digunakan
 
+Aplikasi ini dibangun menggunakan dua bahasa pemrograman:
 
+- **Back-end:** Go dan Node.js
+- **Front-end:** PHP dengan framework Laravel
 
+## Arsitektur Aplikasi
+
+### Arsitektur Monolithic
+
+Arsitektur monolithic mengacu pada aplikasi tunggal mandiri yang menampung semua fungsi, database, dan tampilan pengguna dalam satu kode. Pendekatan ini menawarkan kesederhanaan dan kemudahan pengembangan, namun bisa menjadi rumit dan sulit dipertahankan seiring perkembangan aplikasi. Selain itu, semua fungsi, database, dan tampilan pengguna yang tergabung dalam satu kode dapat memperlambat proses pengembangan. Hal ini juga dapat menghambat skalabilitas dan ketangguhan aplikasi terhadap perubahan yang cepat dan permintaan pengguna.
+
+### Arsitektur Microservice
+
+Aplikasi ini menggunakan arsitektur microservice untuk membagi layanan menjadi bagian yang lebih kecil. Setiap service memiliki database-nya masing-masing, memastikan bahwa satu service tidak memengaruhi service lainnya. Namun, meskipun berdiri sendiri, setiap service tetap saling terhubung dan berkomunikasi melalui HTTP Request berstandar REST API.
+
+#### Service yang Tersedia
+
+1. **Dashboard Service** - Dapat diakses di `localhost:8001/admin/beranda`
+2. **About Service** - Dapat diakses di `localhost:8002/admin/tentang`
+3. **Study Program Service** - Dapat diakses di `localhost:8003/admin/prodi`
+4. **Authentication Service** - Dapat diakses di `localhost:7009/admin/autentikasi`
+
+Setiap service berjalan secara tunggal dan menggunakan port yang berbeda untuk memastikan pemisahan yang jelas antara setiap layanan. Jika salah satu service mengalami masalah, service lainnya tetap dapat beroperasi tanpa terganggu.
+
+## Database
+
+Pada bagian back-end, setiap service memiliki database-nya masing-masing. Dalam aplikasi web ini terdapat empat service dan empat database. Setiap service dirancang menggunakan port yang berbeda untuk menghindari konflik.
+
+### Diagram Arsitektur
+
+Pada gambar terlampir, Anda dapat melihat arsitektur microservice yang digunakan dalam pengembangan aplikasi website Fakultas Vokasi. REST API digunakan sebagai penghubung antara web UI dengan service yang tersedia, memungkinkan service diakses oleh beberapa platform tanpa terbatas pada satu bahasa pemrograman.
+
+## Kesimpulan
+
+Aplikasi web ini menggabungkan berbagai teknologi dan pendekatan arsitektur untuk menciptakan sistem informasi yang efisien dan mudah dikelola untuk Fakultas Vokasi IT Del. Penggunaan arsitektur microservice memastikan aplikasi tetap scalable dan robust terhadap perubahan dan permintaan pengguna yang cepat.
