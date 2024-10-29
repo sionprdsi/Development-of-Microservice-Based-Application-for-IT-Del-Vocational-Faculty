@@ -1,4 +1,4 @@
-# MicroService_FakultasVokasi
+# MicroService Fakultas Vokasi
 
 Aplikasi berbasis web ini dikembangkan untuk sistem informasi Fakultas Vokasi IT Del. Aplikasi ini memungkinkan pengguna untuk mengakses informasi mengenai Fakultas Vokasi IT Del. 
 
