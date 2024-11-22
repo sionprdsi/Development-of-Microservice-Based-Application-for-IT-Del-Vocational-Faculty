@@ -13,42 +13,45 @@
     <img src="https://img.shields.io/badge/Editor-VS_Code-blue?logo=visualstudiocode&logoColor=white" />
 </p>
 
-Aplikasi berbasis web ini dikembangkan untuk sistem informasi Fakultas Vokasi IT Del. Aplikasi ini memungkinkan pengguna untuk mengakses informasi mengenai Fakultas Vokasi IT Del. 
+# Web Application for Vocational Faculty IT Del Information System
 
-## Teknologi yang Digunakan
+This web-based application has been developed for the Information System of the Vocational Faculty of IT Del. It allows users to access various information regarding the Vocational Faculty of IT Del.
 
-Aplikasi ini dibangun menggunakan dua bahasa pemrograman:
+## Technologies Used
 
-- **Back-end:** Go dan Node.js
-- **Front-end:** PHP dengan framework Laravel
+This application is built using two programming languages:
 
-## Arsitektur Aplikasi
+- **Back-end:** Go and Node.js
+- **Front-end:** PHP with Laravel Framework
 
-### Arsitektur Monolithic
+## Application Architecture
 
-Arsitektur monolithic mengacu pada aplikasi tunggal mandiri yang menampung semua fungsi, database, dan tampilan pengguna dalam satu kode. Pendekatan ini menawarkan kesederhanaan dan kemudahan pengembangan, namun bisa menjadi rumit dan sulit dipertahankan seiring perkembangan aplikasi. Selain itu, semua fungsi, database, dan tampilan pengguna yang tergabung dalam satu kode dapat memperlambat proses pengembangan. Hal ini juga dapat menghambat skalabilitas dan ketangguhan aplikasi terhadap perubahan yang cepat dan permintaan pengguna.
+### Monolithic Architecture
 
-### Arsitektur Microservice
+The monolithic architecture refers to a self-contained application that includes all functions, databases, and user interfaces within a single codebase. This approach provides simplicity and ease of development, but it can become complex and harder to maintain as the application evolves. Additionally, having all functions, databases, and user interfaces within a single codebase may slow down the development process. It can also hinder scalability and the application's resilience to rapid changes and user demands.
 
-Aplikasi ini menggunakan arsitektur microservice untuk membagi layanan menjadi bagian yang lebih kecil. Setiap service memiliki database-nya masing-masing, memastikan bahwa satu service tidak memengaruhi service lainnya. Namun, meskipun berdiri sendiri, setiap service tetap saling terhubung dan berkomunikasi melalui HTTP Request berstandar REST API.
+### Microservice Architecture
 
-#### Service yang Tersedia
+This application utilizes a microservice architecture, dividing the application into smaller, independent services. Each service has its own database, ensuring that one service does not affect the others. However, despite being independent, these services are still interconnected and communicate via standard REST API HTTP requests.
 
-1. **Dashboard Service** - Dapat diakses di `localhost:8001/admin/beranda`
-2. **About Service** - Dapat diakses di `localhost:8002/admin/tentang`
-3. **Study Program Service** - Dapat diakses di `localhost:8003/admin/prodi`
-4. **Authentication Service** - Dapat diakses di `localhost:7009/admin/autentikasi`
+#### Available Services
 
-Setiap service berjalan secara tunggal dan menggunakan port yang berbeda untuk memastikan pemisahan yang jelas antara setiap layanan. Jika salah satu service mengalami masalah, service lainnya tetap dapat beroperasi tanpa terganggu.
+1. **Dashboard Service** - Accessible at `localhost:8001/admin/beranda`
+2. **About Service** - Accessible at `localhost:8002/admin/tentang`
+3. **Study Program Service** - Accessible at `localhost:8003/admin/prodi`
+4. **Authentication Service** - Accessible at `localhost:7009/admin/autentikasi`
+
+Each service runs independently and uses a different port to ensure clear separation between services. If one service encounters an issue, the others can continue to operate without disruption.
 
 ## Database
 
-Pada bagian back-end, setiap service memiliki database-nya masing-masing. Dalam aplikasi web ini terdapat empat service dan empat database. Setiap service dirancang menggunakan port yang berbeda untuk menghindari konflik.
+In the back-end, each service has its own database. This web application consists of four services, each with its own database. Each service is designed to operate on a separate port to avoid conflicts.
 
-### Diagram Arsitektur
+### Architecture Diagram
 
-Pada gambar terlampir, Anda dapat melihat arsitektur microservice yang digunakan dalam pengembangan aplikasi website Fakultas Vokasi. REST API digunakan sebagai penghubung antara web UI dengan service yang tersedia, memungkinkan service diakses oleh beberapa platform tanpa terbatas pada satu bahasa pemrograman.
+In the attached diagram, you can see the microservice architecture used in the development of the Vocational Faculty website application. REST API serves as the bridge between the web UI and the available services, allowing them to be accessed by multiple platforms without being restricted to a single programming language.
 
-## Kesimpulan
+## Conclusion
 
-Aplikasi web ini menggabungkan berbagai teknologi dan pendekatan arsitektur untuk menciptakan sistem informasi yang efisien dan mudah dikelola untuk Fakultas Vokasi IT Del. Penggunaan arsitektur microservice memastikan aplikasi tetap scalable dan robust terhadap perubahan dan permintaan pengguna yang cepat.
+This web application combines various technologies and architectural approaches to create an efficient and manageable information system for the Vocational Faculty of IT Del. The use of microservice architecture ensures that the application remains scalable and resilient to rapid changes and user demands.
+
