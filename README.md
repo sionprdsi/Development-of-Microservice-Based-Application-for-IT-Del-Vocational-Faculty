@@ -2,11 +2,15 @@
 
 ### <summary><strong>Tools:</strong></summary>
 <p>
-    <img src="https://img.shields.io/badge/Back-end-Go-blue?style=flat&logo=go&logoColor=white" />
-    <img src="https://img.shields.io/badge/Back-end-Node.js-green?style=flat&logo=node.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/Front-end-PHP-orange?style=flat&logo=php&logoColor=white" />
-    <img src="https://img.shields.io/badge/Framework-Laravel-red?style=flat&logo=laravel&logoColor=white" />
-    <img src="https://img.shields.io/badge/Architecture-Microservices-yellow?style=flat&logo=docker&logoColor=white" />
+    <img src="https://img.shields.io/badge/Back-end-Go-blue?logo=go&logoColor=white" />
+    <img src="https://img.shields.io/badge/Back-end-Node.js-green?logo=node.js&logoColor=white" />
+    <img src="https://img.shields.io/badge/Front-end-PHP-orange?logo=php&logoColor=white" />
+    <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Architecture-Microservices-yellow?logo=docker&logoColor=white" />
+    <img src="https://img.shields.io/badge/Database-MySQL-blue?logo=mysql&logoColor=white" />
+    <img src="https://img.shields.io/badge/Service-REST_API-purple?logo=swagger&logoColor=white" />
+    <img src="https://img.shields.io/badge/Service-Docker-lightgrey?logo=docker&logoColor=white" />
+    <img src="https://img.shields.io/badge/Editor-VS_Code-blue?logo=visualstudiocode&logoColor=white" />
 </p>
 
 Aplikasi berbasis web ini dikembangkan untuk sistem informasi Fakultas Vokasi IT Del. Aplikasi ini memungkinkan pengguna untuk mengakses informasi mengenai Fakultas Vokasi IT Del. 
