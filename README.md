@@ -2,15 +2,15 @@
 
 ### <summary><strong>Tools:</strong></summary>
 <p>
-    <img src="https://img.shields.io/badge/Back-end-Go-blue?logo=go" />
-    <img src="https://img.shields.io/badge/Back-end-Node.js-green?logo=node.js" />
-    <img src="https://img.shields.io/badge/Front-end-PHP-orange?logo=php" />
-    <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel" />
-    <img src="https://img.shields.io/badge/Architecture-Microservices-yellow?logo=docker" />
-    <img src="https://img.shields.io/badge/Database-MySQL-blue?logo=mysql" />
-    <img src="https://img.shields.io/badge/Service-REST%20API-purple?logo=swagger" />
-    <img src="https://img.shields.io/badge/Service-Docker-lightgrey?logo=docker" />
-    <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode" />
+    <img src="https://img.shields.io/badge/Back-end-Go-blue?style=flat&logo=go&logoColor=white" />
+    <img src="https://img.shields.io/badge/Back-end-Node.js-green?style=flat&logo=node.js&logoColor=white" />
+    <img src="https://img.shields.io/badge/Front-end-PHP-orange?style=flat&logo=php&logoColor=white" />
+    <img src="https://img.shields.io/badge/Framework-Laravel-red?style=flat&logo=laravel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Architecture-Microservices-yellow?style=flat&logo=docker&logoColor=white" />
+    <img src="https://img.shields.io/badge/Database-MySQL-blue?style=flat&logo=mysql&logoColor=white" />
+    <img src="https://img.shields.io/badge/Service-REST%20API-purple?style=flat&logo=swagger&logoColor=white" />
+    <img src="https://img.shields.io/badge/Service-Docker-lightgrey?style=flat&logo=docker&logoColor=white" />
+    <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?style=flat&logo=visualstudiocode&logoColor=white" />
 </p>
 
 Aplikasi berbasis web ini dikembangkan untuk sistem informasi Fakultas Vokasi IT Del. Aplikasi ini memungkinkan pengguna untuk mengakses informasi mengenai Fakultas Vokasi IT Del. 
