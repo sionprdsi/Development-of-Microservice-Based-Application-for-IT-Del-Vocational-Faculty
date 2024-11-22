@@ -1,5 +1,18 @@
 # MicroService Fakultas Vokasi
 
+### <summary><strong>Tools:</strong></summary>
+<p>
+    <img src="https://img.shields.io/badge/Back-end-Go-blue?logo=go" />
+    <img src="https://img.shields.io/badge/Back-end-Node.js-green?logo=node.js" />
+    <img src="https://img.shields.io/badge/Front-end-PHP-orange?logo=php" />
+    <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel" />
+    <img src="https://img.shields.io/badge/Architecture-Microservices-yellow?logo=docker" />
+    <img src="https://img.shields.io/badge/Database-MySQL-blue?logo=mysql" />
+    <img src="https://img.shields.io/badge/Service-REST%20API-purple?logo=swagger" />
+    <img src="https://img.shields.io/badge/Service-Docker-lightgrey?logo=docker" />
+    <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode" />
+</p>
+
 Aplikasi berbasis web ini dikembangkan untuk sistem informasi Fakultas Vokasi IT Del. Aplikasi ini memungkinkan pengguna untuk mengakses informasi mengenai Fakultas Vokasi IT Del. 
 
 ## Teknologi yang Digunakan
