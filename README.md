@@ -2,14 +2,16 @@
 
 ### <summary><strong>Tools:</strong></summary>
 <p>
-    <img src="https://img.shields.io/badge/Back-end-Go-blue?logo=go&logoColor=white" />
-    <img src="https://img.shields.io/badge/Back-end-Node.js-green?logo=node.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/Back-end-PHP-orange?logo=php&logoColor=white" />
+    <img src="https://img.shields.io/badge/Code-Go-blue?logo=go&logoColor=white" />
+    <img src="https://img.shields.io/badge/Server-Node.js-green?logo=node.js&logoColor=white" />
     <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
-    <img src="https://img.shields.io/badge/Database-MySQL-blue?logo=mysql&logoColor=white" />
-    <img src="https://img.shields.io/badge/Database-SQLyog-DB5C5C?logo=sqlyog&logoColor=white" />
-    <img src="https://img.shields.io/badge/Frontend-JavaScript-yellow?logo=javascript&logoColor=white" />
-    <img src="https://img.shields.io/badge/Editor-VS_Code-blue?logo=visualstudiocode&logoColor=white" />
+    <img src="https://img.shields.io/badge/Code-PHP-blue?logo=php" />
+    <img src="https://img.shields.io/badge/Database-MySQL-orange?logo=mysql" />
+    <img src="https://img.shields.io/badge/Database-SQLyog-red?logo=sqlyog" />
+    <img src="https://img.shields.io/badge/Server-XAMPP-yellow?logo=apache" />
+    <img src="https://img.shields.io/badge/Tool-npm-red?logo=npm&logoColor=white" />
+    <img src="https://img.shields.io/badge/API-REST%20API-blue?logo=swagger&logoColor=white" />
+    <img src="https://img.shields.io/badge/Tool-Postman-orange?logo=postman&logoColor=white" />
 </p>
 
 # Web Application for Vocational Faculty IT Del Information System
