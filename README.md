@@ -1,13 +1,28 @@
+# MicroService Web-Based
+
+### <summary><strong>Tools:</strong></summary>
+<p>
+    <img src="https://img.shields.io/badge/Back-end-Go-blue?logo=go&logoColor=white" />
+    <img src="https://img.shields.io/badge/Back-end-Node.js-green?logo=node.js&logoColor=white" />
+    <img src="https://img.shields.io/badge/Back-end-PHP-orange?logo=php&logoColor=white" />
+    <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Database-MySQL-blue?logo=mysql&logoColor=white" />
+    <img src="https://img.shields.io/badge/Database-SQLyog-DB5C5C?logo=sqlyog&logoColor=white" />
+    <img src="https://img.shields.io/badge/Frontend-JavaScript-yellow?logo=javascript&logoColor=white" />
+    <img src="https://img.shields.io/badge/Editor-VS_Code-blue?logo=visualstudiocode&logoColor=white" />
+</p>
+
 # Web Application for Vocational Faculty IT Del Information System
 
 This web-based application has been developed for the Information System of the Vocational Faculty of IT Del. It allows users to access various information regarding the Vocational Faculty of IT Del.
 
 ## Technologies Used
 
-This application is built using two programming languages:
+This application is built using several programming languages and frameworks:
 
-- **Back-end:** Go and Node.js
-- **Front-end:** PHP with Laravel Framework
+- **Back-end:** Go, Node.js, PHP with Laravel Framework
+- **Database:** MySQL
+- **Frontend:** JavaScript
 
 ## Application Architecture
 
@@ -40,11 +55,9 @@ In the attached diagram, you can see the microservice architecture used in the d
 
 This web application combines various technologies and architectural approaches to create an efficient and manageable information system for the Vocational Faculty of IT Del. The use of microservice architecture ensures that the application remains scalable and resilient to rapid changes and user demands.
 
-## Contribution & Feedback:
-We are very open to contributions and feedback from the community. For more information or any questions, feel free to contact us via [spardosi12@gmail.com](mailto:spardosi12@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/sion-pardosi-961607254/).
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
-*Created with Laravel 10*
+## Contribution & Feedback:
+We are very open to contributions and feedback from the community. For more information or any questions, feel free to contact us via [spardosi12@gmail.com](mailto:spardosi12@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/sion-pardosi-961607254/).
