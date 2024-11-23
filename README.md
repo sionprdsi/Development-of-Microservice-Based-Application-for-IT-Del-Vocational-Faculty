@@ -9,10 +9,8 @@
     <img src="https://img.shields.io/badge/Architecture-Microservices-yellow?logo=docker&logoColor=white" />
     <img src="https://img.shields.io/badge/Database-MySQL-blue?logo=mysql&logoColor=white" />
     <img src="https://img.shields.io/badge/Database-SQLyog-DB5C5C?logo=sqlyog&logoColor=white" />
-    <img src="https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb&logoColor=white" />
     <img src="https://img.shields.io/badge/Frontend-JavaScript-yellow?logo=javascript&logoColor=white" />
     <img src="https://img.shields.io/badge/Service-REST_API-purple?logo=swagger&logoColor=white" />
-    <img src="https://img.shields.io/badge/Service-Docker-lightgrey?logo=docker&logoColor=white" />
     <img src="https://img.shields.io/badge/Editor-VS_Code-blue?logo=visualstudiocode&logoColor=white" />
 </p>
 
