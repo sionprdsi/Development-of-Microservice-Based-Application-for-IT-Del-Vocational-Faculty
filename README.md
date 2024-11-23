@@ -4,10 +4,13 @@
 <p>
     <img src="https://img.shields.io/badge/Back-end-Go-blue?logo=go&logoColor=white" />
     <img src="https://img.shields.io/badge/Back-end-Node.js-green?logo=node.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/Front-end-PHP-orange?logo=php&logoColor=white" />
+    <img src="https://img.shields.io/badge/Back-end-PHP-orange?logo=php&logoColor=white" />
     <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
     <img src="https://img.shields.io/badge/Architecture-Microservices-yellow?logo=docker&logoColor=white" />
     <img src="https://img.shields.io/badge/Database-MySQL-blue?logo=mysql&logoColor=white" />
+    <img src="https://img.shields.io/badge/Database-SQLyog-DB5C5C?logo=sqlyog&logoColor=white" />
+    <img src="https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb&logoColor=white" />
+    <img src="https://img.shields.io/badge/Frontend-JavaScript-yellow?logo=javascript&logoColor=white" />
     <img src="https://img.shields.io/badge/Service-REST_API-purple?logo=swagger&logoColor=white" />
     <img src="https://img.shields.io/badge/Service-Docker-lightgrey?logo=docker&logoColor=white" />
     <img src="https://img.shields.io/badge/Editor-VS_Code-blue?logo=visualstudiocode&logoColor=white" />
@@ -54,4 +57,12 @@ In the attached diagram, you can see the microservice architecture used in the d
 ## Conclusion
 
 This web application combines various technologies and architectural approaches to create an efficient and manageable information system for the Vocational Faculty of IT Del. The use of microservice architecture ensures that the application remains scalable and resilient to rapid changes and user demands.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contribution & Feedback:
+We are very open to contributions and feedback from the community. For more information or any questions, feel free to contact us via [spardosi12@gmail.com](mailto:spardosi12@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/sion-pardosi-961607254/).
+
 
