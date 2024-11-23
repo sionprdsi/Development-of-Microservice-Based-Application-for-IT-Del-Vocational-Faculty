@@ -56,11 +56,10 @@ In the attached diagram, you can see the microservice architecture used in the d
 
 This web application combines various technologies and architectural approaches to create an efficient and manageable information system for the Vocational Faculty of IT Del. The use of microservice architecture ensures that the application remains scalable and resilient to rapid changes and user demands.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Contribution & Feedback:
 We are very open to contributions and feedback from the community. For more information or any questions, feel free to contact us via [spardosi12@gmail.com](mailto:spardosi12@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/sion-pardosi-961607254/).
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
