@@ -2,9 +2,9 @@
 
 ### <summary><strong>Tools:</strong></summary>
 <p>
-    <img src="https://img.shields.io/badge/Back-end-Go-blue?logo=go&logoColor=white" />
-    <img src="https://img.shields.io/badge/Back-end-Node.js-green?logo=node.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/Back-end-PHP-orange?logo=php&logoColor=white" />
+    <img src="https://img.shields.io/badge/Code-Go-blue?logo=go&logoColor=white" />
+    <img src="https://img.shields.io/badge/Server-Node.js-green?logo=node.js&logoColor=white" />
+    <img src="https://img.shields.io/badge/Code-PHP-blue?&logo=php" />
     <img src="https://img.shields.io/badge/Framework-Laravel-red?logo=laravel&logoColor=white" />
     <img src="https://img.shields.io/badge/Architecture-Microservices-yellow?logo=docker&logoColor=white" />
     <img src="https://img.shields.io/badge/Database-MySQL-blue?logo=mysql&logoColor=white" />
