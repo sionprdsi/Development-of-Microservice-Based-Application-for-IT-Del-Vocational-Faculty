@@ -1,42 +1,45 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const axios = require('axios');
+// Mengimpor modul yang diperlukan
+const express = require('express'); // Mengimpor framework Express untuk membuat server
+const bodyParser = require('body-parser'); // Mengimpor middleware body-parser untuk memparsing permintaan HTTP
+const axios = require('axios'); // Mengimpor modul axios untuk melakukan permintaan HTTP
 
+// Membuat instance aplikasi Express
 const app = express();
-const PORT = 7009;
+const PORT = 7009; // Menentukan port di mana server akan berjalan
 
 // Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); // Middleware untuk memparsing request dengan tipe JSON
+app.use(bodyParser.urlencoded({ extended: true })); // Middleware untuk memparsing request dengan tipe URL-encoded
 
-// Endpoint to check server status
+// Endpoint untuk memeriksa status server
 app.get('/status', (req, res) => {
-  res.status(200).send('Server is running');
+  res.status(200).send('Server is running'); // Mengirim respon bahwa server berjalan dengan status 200 (OK)
 });
 
-// Login route
+// Route login
 app.post('/login', async (req, res) => {
   try {
-    // Send login request to database to verify credentials
-    const { email, password } = req.body;
+    // Mengirim permintaan login ke database untuk memverifikasi kredensial
+    const { email, password } = req.body; // Mendapatkan email dan password dari body request
     
-    // Example: Validate credentials against your database
-    const user = await User.findOne({ email });
+    // Contoh: Memvalidasi kredensial terhadap database
+    const user = await User.findOne({ email }); // Mencari user berdasarkan email di database
 
+    // Jika user tidak ditemukan atau password tidak valid
     if (!user || !user.isValidPassword(password)) {
-      return res.status(401).send('Email or password is incorrect');
+      return res.status(401).send('Email or password is incorrect'); // Mengirim respon error 401 (Unauthorized)
     }
 
-    // Redirect to admin page if login is successful
-    res.redirect('/admin/home');
+    // Redirect ke halaman admin jika login berhasil
+    res.redirect('/admin/home'); // Mengarahkan pengguna ke halaman admin
   } catch (error) {
-    // Handle login error
-    console.error('Error during login:', error);
-    res.status(500).send('Internal Server Error');
+    // Menangani error saat login
+    console.error('Error during login:', error); // Mencetak error ke console
+    res.status(500).send('Internal Server Error'); // Mengirim respon error 500 (Internal Server Error)
   }
-});
+}); 
 
-// Start the server
+// Memulai server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`); // Menampilkan pesan bahwa server berjalan pada port yang ditentukan
 });

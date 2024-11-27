@@ -21,7 +21,7 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-        // Periksa apakah server Node.js sedang berjalan
+        // Check if Node.js server is running
         $nodeServerStatus = Http::get('http://localhost:7009/status');
 
         if ($nodeServerStatus->status() !== 200) {

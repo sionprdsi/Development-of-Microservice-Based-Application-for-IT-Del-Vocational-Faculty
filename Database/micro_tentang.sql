@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Struktur dari tabel `tentangs`
 --
-
+USE micro_tentang
 DROP TABLE tentangs
 CREATE TABLE `tentangs` (
   `id` BIGINT(20) UNSIGNED NOT NULL,

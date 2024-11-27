@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Struktur dari tabel `profils`
 --
-
+USE micro_beranda
 DROP TABLE profils
 CREATE TABLE `profils` (
   `id` BIGINT(20) UNSIGNED NOT NULL,

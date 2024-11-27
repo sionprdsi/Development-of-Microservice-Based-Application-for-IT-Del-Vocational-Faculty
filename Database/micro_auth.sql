@@ -28,7 +28,7 @@ USE micro_auth
 --
 -- Struktur dari tabel `users`
 --
-
+USE micro_auth
 CREATE TABLE `users` (
   `id` BIGINT(20) UNSIGNED NOT NULL,
   `name` VARCHAR(255) COLLATE utf8mb4_unicode_ci NOT NULL,
